@@ -1,19 +1,19 @@
 const { src, dest, watch, parallel, series } = require("gulp");
 
-const scss = require("gulp-sass");
-const concat = require("gulp-concat");
-const autoprefixer = require("gulp-autoprefixer");
-const uglify = require("gulp-uglify");
-const imagemin = require("gulp-imagemin");
-const del = require("del");
-const browserSync = require("browser-sync").create();
+const scss          = require('gulp-sass');
+const concat        = require('gulp-concat');
+const browserSync   = require('browser-sync').create();
+const uglify        = require("gulp-uglify");
+const autoprefixer  = require('gulp-autoprefixer');
+const imagemin      = require('gulp-imagemin');
+const del           = require('del');
 
 function browsersync() {
   browserSync.init({
-    server: {
-      baseDir: "app/",
-    },
-    notify: false,
+    server : {
+      baseDir: 'app/',
+      notify: false
+    }
   });
 }
 
