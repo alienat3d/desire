@@ -14,4 +14,9 @@ $(function () {
     autoplay: true
   });
 
+  var mixer = mixitup(".gallery__inner", {
+    load: {
+      filter: ".cat-living-room",
+    },
+  });
 })
