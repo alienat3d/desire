@@ -49,11 +49,11 @@
   background-color: #fff;
   // TODO:play with shadow
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
+  transition: $transition;
 
   &.rightside-menu--close {
     transform: translateX(500%);
-    transition: 1.5s;
+    transition: $transition-slower;
   }
 
   &__close {
@@ -164,14 +164,14 @@
   &__inner {
     position: relative;
     padding-bottom: 70px;
-    &::after{
+    &::after {
       z-index: -1;
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       width: 100%;
       height: 722px;
-      background-image: url('../images/top-slider-bg.jpg');
+      background-image: url("../images/top-slider-bg.jpg");
       background-repeat: no-repeat;
       background-position: top center;
       background-size: cover;
@@ -221,6 +221,237 @@
   }
 }
 // === / TOP ===
+
+// === NEW COLLECTION ===
+.new-collection {
+  padding: 45px 0 105px;
+  text-align: center;
+
+  &__title {
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    @extend %montserrat-700;
+    font-size: 36px;
+    line-height: 51px;
+    color: $title;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 250px;
+      height: 1px;
+      background-color: #6d7278;
+    }
+  }
+
+  &__text {
+    margin: 0 auto 30px;
+    max-width: 730px;
+  }
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      .collection__info {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    min-height: 350px;
+    object-fit: cover;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(#fff, 0.6);
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &__info-title {
+    position: relative;
+    margin-bottom: 19px;
+    @extend %montserrat-700;
+    padding-bottom: 19px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $title;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 80%;
+      height: 1px;
+      background-color: #6d7278;
+    }
+  }
+
+  &__info-text {
+    @extend %open-sans-600;
+    font-size: 14px;
+    color: #707070;
+  }
+}
+// === / NEW COLLECTION ===
+
+// === BANNER-SOFA ===
+.banner-sofa {
+  padding: 170px 0 155px;
+  background-image: url("../images/banner-sofa-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 616px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    min-width: 540px;
+    @extend %montserrat-700;
+    font-size: 60px;
+    line-height: 80px;
+    color: $title;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 1px;
+      background-color: #6d7278;
+    }
+  }
+
+  &__text {
+    min-width: 540px;
+    span {
+      font-style: italic;
+    }
+  }
+}
+// === / BANNER-SOFA ===
+
+// === WORKFLOW ===
+.workflow {
+  padding: 80px 0 110px;
+
+  &__title {
+    margin-bottom: 40px;
+    @extend %montserrat-700;
+    font-size: 36px;
+    line-height: 51px;
+    text-align: center;
+    color: $title;
+  }
+
+  &__items {
+  }
+
+  &__items-box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba($title, 0.7);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: -0.5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $title;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+  }
+
+  &__item--production {
+    margin-left: 317px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background-color: rgba($title, 0.7);
+    }
+  }
+
+  &__item--measurements{
+    padding-top: 38px;
+    margin-left: 306px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background-color: rgba($title, 0.7);
+    }
+  }
+
+  &__item--production,
+  &__item--consultation {
+    padding-bottom: 38px;
+  }
+
+  &__item-image {
+  }
+
+  &__item-title {
+    margin-left: 10px;
+    @extend %montserrat-700;
+    line-height: 1;
+    color: $title;
+  }
+
+  &__item-text {
+    margin-top: 13px;
+    line-height: 27px;
+  }
+}
+// === / WORKFLOW ===
 
 // === FOOTER ===
 .footer {

@@ -6,7 +6,7 @@ body {
 body {
   @extend %open-sans-400;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 28px;
   color: $default;
   overflow-x: hidden;
   min-width: 320px;
@@ -29,6 +29,12 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 1920px;
 }
 
 .slick-dots {
