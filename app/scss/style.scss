@@ -687,9 +687,6 @@
     margin-bottom: 35px;
   }
 
-  &__list {
-  }
-
   &__item {
     margin-bottom: 33px;
   }
@@ -704,12 +701,6 @@
     color: $title;
     border-bottom: 2px solid #fff;
     border-radius: 4px;
-  }
-
-  &__item-txt {
-  }
-
-  &__item-num {
   }
 
   &__line {
@@ -773,12 +764,6 @@
       & + & {
         margin-left: 40px;
       }
-		}
-
-		&__social-link {
-		}
-
-		&__social-icon {
 		}
 
     &__text {
