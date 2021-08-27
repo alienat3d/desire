@@ -35,6 +35,11 @@
     color: rgba(54, 56, 56, 0.9);
     line-height: 22px;
   }
+  &__list-link--active {
+    border-bottom: 2px solid rgba($title, .7);
+    border-radius: 1px;
+    padding-bottom: 4px;
+  }
 }
 
 .rightside-menu {
@@ -104,6 +109,29 @@
   &__image {
     max-width: 483px;
   }
+}
+
+.breadcrumbs {
+  padding: 13px 14px;
+  background-color: rgba(#DFDFDF, .5);
+
+		&__list {
+      display: flex;
+		}
+
+		&__item::after {
+      content: '/';
+      margin-left: -3px;
+      margin-right: 4px;
+		}
+    &__item:last-child::after{
+      display: none;
+    }
+
+		&__link {
+      font-size: 14px;
+      color: $default;
+		}
 }
 // === / REUSABLE BLOCKS ===
 
