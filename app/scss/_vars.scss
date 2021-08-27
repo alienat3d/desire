@@ -24,3 +24,12 @@ $title: #363838;
 $transition: all .5s;
 $transition-slower: all 1.5s;
 // === / TRANSITION ===
+
+// === FANCYBOX ERROR FIX ===
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+// === / FANCYBOX ERROR FIX ===

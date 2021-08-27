@@ -557,6 +557,74 @@
 }
 // === / BLOG-BOX ===
 
+// === ABOUT ===
+.about {
+
+		&__preview {
+      margin-top: -55px;
+      padding: 160px 0;
+      text-align: center;
+      background-image: url('../images/about-background.jpg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+		}
+
+		&__preview-title {
+      @extend %montserrat-700;
+      font-size: 60px;
+      line-height: 80px;
+      color: $title;
+		}
+
+		&__content {
+      padding: 100px 0 55px;
+		}
+
+		&__title {
+      position: relative;
+      margin-bottom: 23px;
+      padding-bottom: 20px;
+      text-align: left;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        height: 2px;
+        background-color: #979797;
+      }
+		}
+
+		&__text {
+      margin-left: 285px;
+
+      p {
+        margin-bottom: 35px;
+      }
+		}
+
+		&__pop-up {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 414px;
+      background-image: url('../images/about-video-pop-up-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+		}
+
+		&__pop-up-link-to-vid {
+		}
+
+		&__pop-up-play-icon {
+		}
+}
+// === / ABOUT ===
+
 // === FOOTER ===
 .footer {
   &__content {
