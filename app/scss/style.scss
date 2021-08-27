@@ -231,10 +231,6 @@
     position: relative;
     margin-bottom: 25px;
     padding-bottom: 25px;
-    @extend %montserrat-700;
-    font-size: 36px;
-    line-height: 51px;
-    color: $title;
 
     &::after {
       content: "";
@@ -365,11 +361,6 @@
 
   &__title {
     margin-bottom: 40px;
-    @extend %montserrat-700;
-    font-size: 36px;
-    line-height: 51px;
-    text-align: center;
-    color: $title;
   }
 
   &__items-box {
@@ -475,9 +466,6 @@
     -moz-outline-radius: 20px;
   }
 
-  &__inner {
-  }
-
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -498,6 +486,48 @@
   }
 }
 // === / GALLERY ===
+
+// === BLOG-BOX ===
+.blog-box {
+  padding-bottom: 100px;
+
+		&__title {
+      margin: 0 auto 30px;
+      max-width: 430px;
+		}
+
+		&__items {
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+		}
+
+		&__image-link {
+      display: inline-block;
+      margin-bottom: 20px;
+		}
+
+		&__links {
+      margin-bottom: 7px;
+      @extend %open-sans-600;
+      font-size: 14px;
+      color: #707070;
+		}
+
+		&__date,
+    &__author,
+    &__theme {
+      color: inherit;
+		}
+
+		&__item-title {
+      @extend %montserrat-700;
+      font-size: 24px;
+      line-height: 38px;
+      color: $title;
+		}
+}
+// === / BLOG-BOX ===
 
 // === FOOTER ===
 .footer {
@@ -566,6 +596,7 @@
       color: #a1a1a1;
     }
   }
+
   &__form-button {
     margin-left: 9px;
     padding: 6px 12px;
@@ -577,11 +608,13 @@
     color: #fffff0;
     cursor: pointer;
   }
+
   &__social {
     width: 125px;
     margin-right: auto;
     margin-left: 100px;
   }
+
   &__social-link {
     position: relative;
     padding-left: 28px;
