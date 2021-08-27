@@ -98,7 +98,7 @@
     left: 0;
     margin: 0 auto;
     max-width: 252px;
-    height: 1px;
+    height: 2px;
     background-color: #6d7278;
   }
 
@@ -240,7 +240,7 @@
       bottom: 0;
       left: 0;
       width: 185px;
-      height: 1px;
+      height: 2px;
       background-color: #6d7278;
     }
   }
@@ -269,7 +269,7 @@
       left: 0;
       margin: 0 auto;
       width: 250px;
-      height: 1px;
+      height: 2px;
       background-color: #6d7278;
     }
   }
@@ -334,7 +334,7 @@
       left: 0;
       margin: 0 auto;
       width: 80%;
-      height: 1px;
+      height: 2px;
       background-color: #6d7278;
     }
   }
@@ -371,7 +371,7 @@
       bottom: 0;
       left: 0;
       width: 200px;
-      height: 1px;
+      height: 2px;
       background-color: #6d7278;
     }
   }
@@ -738,6 +738,117 @@
 }
 // === / MAP ===
 
+// === CONTACT ===
+.contact {
+  padding-bottom: 100px;
+
+		&__title {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 29px;
+      text-align: left;
+
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        height: 2px;
+        background-color: #6D7278;
+      }
+		}
+
+    &__inner{
+      margin-left: 284px;
+    }
+
+		&__social {
+      display: flex;
+      margin-left: 3px;
+      margin-bottom: 22px;
+		}
+
+		&__social-item {
+      & + & {
+        margin-left: 40px;
+      }
+		}
+
+		&__social-link {
+		}
+
+		&__social-icon {
+		}
+
+    &__text {
+      color: #A1A1A1;
+      margin-bottom: 17px;
+    }
+
+		&__phone {
+      color: $default;
+		}
+
+		&__address {
+      font-style: normal;
+      margin-bottom: 16px;
+		}
+
+		&__info-email {
+      margin-bottom: 24px;
+		}
+
+		&__form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+		}
+
+		&__form-input {
+      margin-bottom: 13px;
+      border: 1px solid #DFDFDF;
+      border-radius: 20px;
+      padding: 6px 17px;
+      width: 49.2%;
+
+      &::placeholder{
+        @extend %open-sans-400;
+        font-size: 16px;
+        line-height: 27px;
+        color: #A1A1A1;
+      }
+		}
+
+		&__form-textarea {
+      margin-bottom: 20px;
+      border: 1px solid #DFDFDF;
+      border-radius: 24px;
+      padding: 14px 17px;
+      width: 100%;
+      min-height: 125px;
+      resize: none;
+
+      &::placeholder{
+        @extend %open-sans-400;
+        font-size: 16px;
+        line-height: 27px;
+        color: #A1A1A1;
+      }
+		}
+
+		&__form-button {
+      border: none;
+      border-radius: 21px;
+      padding: 7px 70px;
+      @extend %open-sans-600;
+      color: #fffff0;
+      background-color: $title;
+      cursor: pointer;
+		}
+}
+// === / CONTACT ===
+
 // === FOOTER ===
 .footer {
   &__content {
@@ -767,24 +878,7 @@
   }
 
   &__info-email {
-    position: relative;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 28px;
-    color: $title;
     margin-bottom: 22px;
-    padding-left: 30px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../images/icons/envelope.svg");
-      top: 8px;
-      left: 0;
-      width: 16px;
-      height: 12px;
-    }
   }
 
   &__form {

@@ -45,6 +45,26 @@ body {
   color: $title;
 }
 
+.email {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  color: $title;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/icons/envelope.svg");
+    top: 8px;
+    left: 0;
+    width: 16px;
+    height: 12px;
+  }
+}
+
 .slick-dots {
   display: flex;
   justify-content: center;
