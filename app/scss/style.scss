@@ -513,6 +513,17 @@
     width: 100%;
     height: 100%;
   }
+
+  &.gallery-page {
+    .gallery__item img {
+      max-height: 1165px;
+    }
+
+    .gallery__item:nth-child(8) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
 }
 // === / GALLERY ===
 
@@ -626,13 +637,13 @@
 
   &::after {
     z-index: -1;
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     height: 414px;
-    background-image: url('../images/inspiration-background.jpg');
+    background-image: url("../images/inspiration-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
@@ -681,7 +692,7 @@
   &__item {
     margin-bottom: 33px;
   }
-  
+
   &__item-content {
     margin-bottom: 33px;
     padding-bottom: 14px;
@@ -690,7 +701,7 @@
     @extend %montserrat-700;
     line-height: 23px;
     color: $title;
-    border-bottom: 2px solid #FFF;
+    border-bottom: 2px solid #fff;
     border-radius: 4px;
   }
 
@@ -712,7 +723,7 @@
 // === PARTNERS ===
 .partners {
   padding: 32px 0 15px;
-  
+
   &__items {
     display: flex;
     justify-content: space-around;
