@@ -112,6 +112,7 @@
 }
 
 .breadcrumbs {
+  z-index: 999;
   padding: 13px 14px;
   background-color: rgba(#dfdfdf, 0.5);
 
@@ -730,6 +731,12 @@
   }
 }
 // === / PARTNERS ===
+
+// === MAP ===
+.map {
+  margin-bottom: 47px;
+}
+// === / MAP ===
 
 // === FOOTER ===
 .footer {
