@@ -252,7 +252,7 @@
 
 // === NEW COLLECTION ===
 .new-collection {
-  padding: 45px 0 105px;
+  padding: 45px 0 35px;
   text-align: center;
 
   &__title {
@@ -280,6 +280,7 @@
 }
 
 .collection {
+  padding-bottom: 70px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
@@ -707,6 +708,17 @@
   }
 }
 // === / INSPIRATION ===
+
+// === PARTNERS ===
+.partners {
+  padding: 32px 0 15px;
+  
+  &__items {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+// === / PARTNERS ===
 
 // === FOOTER ===
 .footer {
