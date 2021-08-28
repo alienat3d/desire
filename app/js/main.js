@@ -14,6 +14,15 @@ $(function () {
     autoplay: true
   });
 
+  $(".contact-slider").slick({
+    slidesToShow: 10,
+    slidesToScroll: 5,
+    autoplaySpeed: 7000,
+    dots: true,
+    arrows: false,
+    autoplay: true
+  });
+
   var mixer = mixitup(".gallery__inner", {
     load: {
       filter: ".cat-living-room",
