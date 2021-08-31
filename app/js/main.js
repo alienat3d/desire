@@ -23,6 +23,12 @@ $(function () {
     autoplay: true
   });
 
+  $(".article-slider__box").slick({
+    arrows: true,
+    prevArrow: "<button type='button' class='slick-prev'><img class='article-slider__angle-left-icon' src='images/icons/angle-left.svg' alt='angle left icon'></button>",
+    nextArrow: "<button type='button' class='slick-next'><img class='article-slider__angle-right-icon' src='images/icons/angle-right.svg' alt='angle right icon'></button>"
+  });
+
   var mixer = mixitup(".gallery__inner", {
     load: {
       filter: ".cat-living-room",
