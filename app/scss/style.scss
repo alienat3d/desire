@@ -905,24 +905,12 @@
     color: #707070;
   }
 
-  &__item-date {
-  }
-
-  &__item-author {
-  }
-
-  &__item-theme {
-  }
-
   &__item-title {
     margin-bottom: 6px;
     @extend %montserrat-700;
     font-size: 24px;
     line-height: 38px;
     color: $title;
-  }
-
-  &__item-text {
   }
 
   &__blockquote {
@@ -964,9 +952,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-  &__pop-up-play-btn {
-  }
 }
 
 .article-pop-up {
@@ -993,9 +978,6 @@
   .slick-next {
     right: 16px;
   }
-
-  &__box {
-  }
 }
 
 .pagination {
@@ -1010,9 +992,6 @@
   &__angle--disabled {
     opacity: 0;
     cursor: default;
-  }
-
-  &__angle-icon {
   }
 
   &__list {
@@ -1067,9 +1046,6 @@
     cursor: pointer;
   }
 
-  &__search-icon {
-  }
-
   &__categories {
     margin-bottom: 35px;
   }
@@ -1083,21 +1059,12 @@
     color: $title;
   }
 
-  &__categories-list {
-  }
-
   &__categories-item {
     margin-bottom: 12px;
   }
 
-  &__categories-link {
-  }
-
   &__recent-posts {
     margin-bottom: 39px;
-  }
-
-  &__recent-posts-list {
   }
 
   &__recent-posts-item {
@@ -1138,12 +1105,6 @@
     & + & {
       margin-left: 20px;
     }
-  }
-
-  &__social-link {
-  }
-
-  &__social-icon {
   }
 }
 // === / BLOG ===
