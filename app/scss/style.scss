@@ -185,6 +185,10 @@
   &__btn-link--lines::after {
     bottom: 19px;
   }
+
+  &__button-menu {
+    display: none;
+  }
 }
 // === / HEADER ===
 
@@ -1450,3 +1454,6 @@
   }
 }
 // === FOOTER ===
+
+// === @-@ ADAPTIVE @-@ ===
+@import "media";
