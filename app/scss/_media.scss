@@ -1,3 +1,11 @@
+// === WIDTH < 1700px ===
+@media (max-width: 1700px) {
+  .contact-slider__image {
+    width: 100%;
+  }
+}
+// === / WIDTH < 1700px ===
+
 // === WIDTH < 1366px ===
 @media (max-width: 1366px) {
   .collection {
@@ -25,6 +33,10 @@
   .top__slider-title {
     font-size: 62px;
     line-height: 74px;
+  }
+
+  .contact-slider__image {
+    height: 240px;
   }
 }
 // === / WIDTH < 1200px ===
@@ -97,6 +109,10 @@
   .gallery__items {
     gap: 15px;
   }
+
+  .contact__inner {
+    margin-left: 0;
+  }
 }
 // === WIDTH / < 840px ===
 
@@ -152,6 +168,12 @@
 
   .inspiration__image {
     display: none;
+  }
+
+  .map {
+    iframe {
+      height: 330px;
+    }
   }
 }
 // === / WIDTH < 768px ===
@@ -213,6 +235,10 @@
   }
 
   .blog-box__image {
+    width: 100%;
+  }
+
+  .contact__form-input {
     width: 100%;
   }
 }
@@ -293,6 +319,10 @@
   .gallery {
     padding: 50px 0;
   }
+
+  .slick-dots li {
+    margin: 0 5px;
+  }
 }
 // === / WIDTH < 630px ===
 
@@ -301,6 +331,14 @@
   .title {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  .menu__list-link--active {
+    border: none;
+  }
+
+  .menu__list-link--line {
+    border-bottom: 2px solid rgba(54, 56, 56, 0.7);
   }
 
   .collection {
@@ -359,6 +397,10 @@
 
   .banner-sofa__title {
     min-width: auto;
+  }
+
+  .slick-dots li {
+    margin: 0 5px;
   }
 }
 // === / WIDTH < 375px ===
