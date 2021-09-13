@@ -37,36 +37,36 @@ $(function () {
     dots: true,
     arrows: false,
     autoplay: false,
-    responsive: [
-    {
-      breakpoint: 1851,
-      settings: {
-        slidesToShow: 9,
-        slidesToScroll: 5
-      }
-    },
-    {
-      breakpoint: 1801,
-      settings: {
-        slidesToShow: 8,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 1761,
-      settings: {
-        slidesToShow: 7,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 1701,
-      settings: {
-        slidesToShow: 6,
-        slidesToScroll: 3
-      }
-    },
-  ]
+  //   responsive: [
+  //   {
+  //     breakpoint: 1851,
+  //     settings: {
+  //       slidesToShow: 9,
+  //       slidesToScroll: 5
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 1801,
+  //     settings: {
+  //       slidesToShow: 8,
+  //       slidesToScroll: 4
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 1761,
+  //     settings: {
+  //       slidesToShow: 7,
+  //       slidesToScroll: 4
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 1701,
+  //     settings: {
+  //       slidesToShow: 6,
+  //       slidesToScroll: 3
+  //     }
+  //   },
+  // ]
   });
   // === / SLIDER IN CONTACT.HTML ===
 
