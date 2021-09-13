@@ -854,12 +854,13 @@
 .contact-slider {
   margin-bottom: 87px;
 
-  &__link {
+  &__item {
     position: relative;
+    width: 175px !important;
     margin-bottom: 21px;
 
-        &:hover {
-      .contact-slider__title {
+    &:hover {
+      .contact-slider__link {
         opacity: 1;
       }
     }
@@ -871,7 +872,7 @@
     object-fit: cover;
   }
 
-  &__title {
+  &__link {
     position: absolute;
     top: 0;
     right: 0;
@@ -887,7 +888,7 @@
     line-height: 22px;
     color: $title;
     transition: $transition;
-    background-color: rgba(#fff, .6);
+    background-color: rgba(#fff, 0.6);
   }
 }
 // === / CONTACT-SLIDER ===
