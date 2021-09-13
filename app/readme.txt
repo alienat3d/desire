@@ -9,3 +9,5 @@ FIXME: SVG on position absolute is not SVG, but PNG, change it.
 FIXME: make .header__button-menu menu same color as Logo.
 
 FIXME: check .partners adaptive in about.html.
+
+FIXME: try slider in another way with wrapper around IMG & P contact.html.
