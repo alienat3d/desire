@@ -854,9 +854,9 @@
 .contact-slider {
   margin-bottom: 87px;
 
-  &__item {
+  &__box {
     position: relative;
-    width: 175px !important;
+    width: 175px;
     margin-bottom: 21px;
 
     &:hover {

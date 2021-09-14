@@ -1,9 +1,9 @@
 // === WIDTH < 1700px ===
-// @media (max-width: 1700px) {
-//   .contact-slider__image {
-//     width: 100%;
-//   }
-// }
+@media (max-width: 1700px) {
+  .contact-slider__image {
+    width: 100%;
+  }
+}
 // === / WIDTH < 1700px ===
 
 // === WIDTH < 1366px ===
@@ -37,6 +37,15 @@
 
   .contact-slider__image {
     height: 240px;
+  }
+
+  .contact-slider__box {
+    width: 100%;
+  }
+
+  .contact-slider__link {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
 // === / WIDTH < 1200px ===
@@ -399,8 +408,19 @@
     min-width: auto;
   }
 
+  .contact-slider__image {
+    height: 310px;
+  }
+
   .slick-dots li {
-    margin: 0 5px;
+    margin: 0 1.5px;
   }
 }
 // === / WIDTH < 375px ===
+// === WIDTH < 330px ===
+@media (max-width: 330px) {
+  .slick-dots li {
+    margin: 0 1px;
+  }
+}
+// === / WIDTH < 330px ===
