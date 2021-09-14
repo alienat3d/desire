@@ -1,9 +1,13 @@
 // === WIDTH < 1700px ===
-// @media (max-width: 1700px) {
-//   .contact-slider__image {
-//     width: 100%;
-//   }
-// }
+@media (max-width: 1700px) {
+  .contact-slider__image {
+    width: 100%;
+  }
+  
+  .contact-slider__item {
+    max-width: 100%;
+  }
+}
 // === / WIDTH < 1700px ===
 
 // === WIDTH < 1366px ===
@@ -33,10 +37,6 @@
   .top__slider-title {
     font-size: 62px;
     line-height: 74px;
-  }
-
-  .contact-slider__image {
-    height: 240px;
   }
 }
 // === / WIDTH < 1200px ===
@@ -401,6 +401,10 @@
 
   .slick-dots li {
     margin: 0 5px;
+  }
+
+  .contact-slider__image {
+    height: 310px;
   }
 }
 // === / WIDTH < 375px ===
