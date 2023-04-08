@@ -4,6 +4,10 @@
 .idea/
 .idea/*
 .vscode
+*.ai
+*.log
+*.pdf
+*.psd
 *.sublime*
 npm-debug.*
 
@@ -11,3 +15,4 @@ dist/
 node_modules/
 app/css/*
 package-lock.json
+Thumbs.db

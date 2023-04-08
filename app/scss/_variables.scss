@@ -1,0 +1,42 @@
+// === COLORS ===
+$default: #5A5A5A;
+$title: #363838;
+// === / COLORS ===
+
+// === FONTS ===
+%open-sans-300-italic{
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+%open-sans-400{
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%open-sans-600{
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%montserrat-700 {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+}
+// === / FONTS ===
+
+// === TRANSITION ===
+$transition-fast: all .3s;
+$transition: all .5s;
+$transition-slower: all 1.5s;
+// === / TRANSITION ===
+
+// === FANCYBOX ERROR FIX ===
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+// === / FANCYBOX ERROR FIX ===
