@@ -20,3 +20,5 @@ FIXME: check .partners adaptive in about.html.
 FIXME: try slider in another way with wrapper around IMG & P contact.html.
 
 FIXME: better text and more pics. Finalizing.
+
+FIXME: find out where ".menu__list-link--line" came from in @media

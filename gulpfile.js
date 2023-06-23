@@ -11,25 +11,27 @@ const svgmin = require('gulp-svgmin');
 const rename = require('gulp-rename');
 const cachebust = require('gulp-cache-bust');
 const sync = require('browser-sync').create();
-const webpackStream = require('webpack-stream');
+// const webpackStream = require('webpack-stream');
 const gulpHtmlBemValidator = require('gulp-html-bem-validator');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require("gulp-autoprefixer");
+const fonter = require("gulp-fonter");
+const ttf2woff2 = require("gulp-ttf2woff2");
 
 const sourceFolder = 'app'; //папка куда собираем все исходники проекта (html, scss, js, img и т.п.)
 const buildFolder = 'docs'; //папка куда собирается проект (указываем docs, если нужен gitHubPage, дополнительно нужно указать в настройках gitHub)
 
 function html() {
-  return src(sourceFolder + '/html/**.html')
+  return src(sourceFolder + "/html/**/*.html")
     .pipe(include())
     // .pipe(webpAvifHTML())
     .pipe(gulpHtmlBemValidator())
-    .pipe(cachebust({
-      type: 'timestamp'
-    }))
+    .pipe(cachebust({ type: "timestamp" }))
     .pipe(dest(buildFolder))
 };
 
 function bem() {
-  return src(sourceFolder + '/html/**.html')
+  return src(sourceFolder + '/html/**/*.html')
     .pipe(gulpHtmlBemValidator())
     .pipe(dest(buildFolder))
 };
@@ -42,50 +44,53 @@ function svg() {
 
 function sprite() {
   return src(sourceFolder + '/img/icons/**/*.svg')
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-
+    .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite.svg"))
     .pipe(dest(buildFolder + '/img/icons'))
 };
 
 function scss() {
   return src(sourceFolder + "/scss/main.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(cleanCSS({ level: 2 }))
     .pipe(rename("main.min.css"))
+    .pipe(sass().on("error", sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(dest(buildFolder + "/css"))
-    .pipe(sass().on("error", sass.logError));
 };
 
 function js() {
-  return src(sourceFolder + "/js/main.js")
-    .pipe(
-      webpackStream({
-        mode: "none",
-        output: {
-          filename: "main.min.js",
-        },
-        module: {
-          rules: [
-            {
-              test: /\.m?js$/,
-              exclude: /node_modules/,
-              use: {
-                loader: "babel-loader",
-                options: {
-                  presets: [["@babel/preset-env", { targets: "defaults" }]],
-                },
-              },
-            },
-          ],
-        },
-      })
-    )
-
-    .pipe(uglify())
-    .pipe(dest(buildFolder + "/js"));
+  return (
+    src(sourceFolder + "/js/*.js")
+      .pipe(sourcemaps.init())
+      // .pipe(
+      //   webpackStream({
+      //     mode: "none",
+      //     output: {
+      //       filename: "main.min.js",
+      //     },
+      //     module: {
+      //       rules: [
+      //         {
+      //           test: /\.m?js$/,
+      //           exclude: /node_modules/,
+      //           use: {
+      //             loader: "babel-loader",
+      //             options: {
+      //               presets: [["@babel/preset-env", { targets: "defaults" }]],
+      //             },
+      //           },
+      //         },
+      //       ],
+      //     },
+      //   })
+      // )
+      .pipe(uglify())
+      .pipe(sourcemaps.write())
+      .pipe(dest(buildFolder + "/js"))
+  );
 };
 
 function img() {
@@ -102,13 +107,24 @@ function img() {
     .pipe(dest(buildFolder + "/img"));
 };
 
+function convertFonts() {
+  return src(sourceFolder + "/fonts/src/*.*")
+    .pipe(fonter({ formats: [ "woff", "ttf" ] }))
+    .pipe(src(sourceFolder + "/fonts/*.ttf"))
+    .pipe(ttf2woff2())
+    .pipe(dest(sourceFolder + "/fonts"));
+}
+
 function fonts() {
-  return src(sourceFolder + '/fonts/**/*')
-    .pipe(dest(buildFolder + '/fonts'))
+  return src(sourceFolder + "/fonts/*.*").pipe(dest(buildFolder + "/fonts"));
 };
 
 function clear() {
   return del(buildFolder)
+};
+
+function clearBlocksDir() {
+  return del(buildFolder + "/blocks")
 };
 
 function serve() {
@@ -117,9 +133,9 @@ function serve() {
     reloadOnRestart: true,
     server: {
       baseDir: buildFolder,
-      directory: true,
+      directory: true, // чтобы загружался сразу index.html поменять на "false"
     },
-    notify: false,
+    notify: false, // чтобы всплывало сообщение об обновлении браузера поменять на "true"
   });
 
   watch(sourceFolder + '/html/**/*.html', series(html)).on('change', sync.reload)
@@ -132,7 +148,8 @@ function serve() {
 };
 
 
-exports.build = series(clear, scss, js, img, sprite, fonts, html);
-exports.watch = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
+exports.build = series(clear, scss, js, img, sprite, fonts, html, clearBlocksDir);
+exports.default = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
+exports.fonts = convertFonts;
 exports.bem = bem;
 exports.clear = clear;

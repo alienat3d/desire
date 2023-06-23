@@ -1,38 +1,38 @@
 // === Montserrat ===
 @font-face {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
-  src: local("Montserrat-Bold"),
-    url('../fonts/montserrat/Montserrat-Bold.woff2') format("woff2"),
-    url('../fonts/Montserrat-Bold.woff') format("woff");
+  src: local("Montserrat"),
+    url("../fonts/montserrat/montserrat-bold.woff2") format("woff2"),
+    url("../fonts/montserrat-bold.woff") format("woff");
   font-display: swap;
 }
 // === OpenSans ===
 @font-face {
-  font-family: "OpenSans-LightItalic";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-style: italic;
-  src: local("OpenSans-LightItalic"),
-    url('../fonts/open-sans/OpenSans-LightItalic.woff2') format("woff2"),
-    url('../fonts/open-sans/OpenSans-LightItalic.woff') format("woff");
+  src: local("Open Sans"),
+    url("../fonts/open-sans/open-sans-light-italic.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-light-italic.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "OpenSans-Regular";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  src: local("OpenSans-Regular"),
-    url('../fonts/open-sans/OpenSans-Regular.woff2') format("woff2"),
-    url('../fonts/open-sans/OpenSans-Regular.woff') format("woff");
+  src: local("Open Sans"),
+    url("../fonts/open-sans/open-sans-regular.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "OpenSans-SemiBold";
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-style: normal;
-  src: local("OpenSans-SemiBold"),
-    url('../fonts/open-sans/OpenSans-SemiBold.woff2') format("woff2"),
-    url('../fonts/open-sans/OpenSans-SemiBold.woff') format("woff");
+  src: local("Open Sans"),
+    url("../fonts/open-sans/open-sans-semi-bold.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-semi-bold.woff") format("woff");
   font-display: swap;
 }

@@ -12,10 +12,6 @@ body {
   min-width: 290px;
 }
 
-a {
-  color: inherit;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -61,7 +57,7 @@ a {
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../images/icons/envelope.svg");
+    background-image: url("../img/icons/envelope.svg");
     top: 8px;
     left: 0;
     width: 16px;
