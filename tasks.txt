@@ -7,18 +7,18 @@ TODO: add some more images of furniture with transparent bg to top slider (index
 
 TODO: add some animation (about.html) to fancy-box video play button;
 
-TODO: add some animation (about.html) to "partners" block; Add reverse-animation block.
+TODO: add "back to top" button;
 
 FIXME: probably have to move remember me checkbox from blog-one.html to contact.html and also remove e-mail input;
 
-FIXME: SVG on position absolute is not SVG, but PNG, change it.
+FIXME: SVG on position absolute is not SVG, but PNG, change it;
 
-FIXME: make .header__button-menu menu same color as Logo.
+FIXME: make .header__button-menu menu same color as Logo;
 
-FIXME: check .partners adaptive in about.html.
+FIXME: check .partners adaptive in about.html;
 
-FIXME: try slider in another way with wrapper around IMG & P contact.html.
+FIXME: try slider in another way with wrapper around IMG & P contact.html;
 
-FIXME: better text and more pics. Finalizing.
+FIXME: better text and more pics, finalizing;
 
-FIXME: find out where ".menu__list-link--line" came from in @media
+FIXME: find out where ".menu__list-link--line" came from in @media;
