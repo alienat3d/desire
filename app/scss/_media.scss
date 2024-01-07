@@ -1,3 +1,11 @@
+@media (min-width: 1040px) {
+  .workflow__item--production {
+    margin-left: 550px;
+  }
+  .workflow__item--measurements {
+    margin-left: 390px;
+  }
+}
 // === WIDTH < 1700px ===
 @media (max-width: 1700px) {
   .contact-slider__image {
@@ -184,7 +192,7 @@
   }
 
   .workflow__item--measurements {
-    margin-left: 100px;
+    margin-left: 162px;
   }
 
   .gallery__buttons {
@@ -408,32 +416,32 @@
   }
 
   .blog-one__link span {
-      display: none;
+    display: none;
   }
 
-  .blog-one__links{
+  .blog-one__links {
     padding: 30px 0;
   }
 
-  .blog-one__comments-item{
+  .blog-one__comments-item {
     flex-wrap: wrap;
   }
 
-  .blog-one__comments-avatar{
+  .blog-one__comments-avatar {
     width: 45px;
     height: 45px;
   }
 
-  .blog-one__comments-info{
+  .blog-one__comments-info {
     margin-top: -46px;
   }
 
   .blog-one__comments-name,
-  .blog-one__comments-date{
+  .blog-one__comments-date {
     margin-left: 55px;
   }
 
-  .blog-one__comments-reply{
+  .blog-one__comments-reply {
     margin: 30px auto 0;
   }
 
