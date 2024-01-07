@@ -45,74 +45,8 @@
   <div class="wrapper">
 
     <!-- === HEADER === -->
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link"
-                  href="about.html">About</a>
-              </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link"
-                  href="gallery.html">Gallery</a>
-              </li>
-            </ul>
-          </nav>
-          <a class="logo"
-            href="index.html">
-            <img class="logo__img"
-              src="img/logo.png"
-              alt="logo">
-          </a>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link"
-                  href="blog.html">Blog</a>
-              </li>
-              <li class="menu__list-item">
-                <span class="menu__list-link menu__list-link--active menu__list-link--line">Contact</span>
-              </li>
-            </ul>
-          </nav>
-          <button class="header__button">
-            <a class="header__btn-link"
-              href="#">
-              <div class="header__btn-link--lines"></div>
-            </a>
-          </button>
-          <button class="header__button-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="rightside-menu rightside-menu--close">
-            <button class="rightside-menu__close">
-              <img src="img/icons/close-btn.svg"
-                alt="close button">
-            </button>
-            <div class="rightside-menu__content">
-              <a class="rightside-menu__logo"
-                href="#">
-                <img src="img/logo-large.png"
-                  alt="logo">
-              </a>
-              <h4 class="rightside-menu__title">Furniture for life</h4>
-              <p class="rightside-menu__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sunt quod voluptate recusandae sapiente,
-                omnis quidem quibusdam debitis tempora et.
-              </p>
-              <img class="rightside-menu__image"
-                src="img/rightside-image.jpg"
-                alt="image">
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- === HEADER === -->
+    @@include('blocks/header.html')
+    <!-- === / HEADER === -->
 
     <main class="main">
       <div class="breadcrumbs">
@@ -622,7 +556,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/contact.min.js"></script>
   <!-- === / JAVASCRIPT === -->
 </body>
 

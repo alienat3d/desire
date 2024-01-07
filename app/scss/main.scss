@@ -28,6 +28,7 @@
   }
   &__list-link--active {
     cursor: default;
+    pointer-events: none;
     border-bottom: 2px solid rgba($title, 0.7);
     border-radius: 1px;
     padding-bottom: 4px;
@@ -147,20 +148,18 @@
     height: 120px;
   }
   &__button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
     cursor: pointer;
-  }
-
-  &__btn-link {
     position: relative;
     display: inline-block;
     width: 37px;
     height: 29px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
   }
-  &__btn-link::before,
-  &__btn-link::after {
+
+  &__button::before,
+  &__button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -170,11 +169,11 @@
     background-color: #000;
     border-radius: 25%;
   }
-  &__btn-link::after {
+  &__button::after {
     top: 15px;
   }
-  &__btn-link--lines::before,
-  &__btn-link--lines::after {
+  &__button--lines::before,
+  &__button--lines::after {
     content: "";
     position: absolute;
     bottom: 3px;
@@ -184,7 +183,7 @@
     background-color: #000;
     border-radius: 25%;
   }
-  &__btn-link--lines::after {
+  &__button--lines::after {
     bottom: 19px;
   }
 
@@ -328,6 +327,8 @@
     margin-bottom: 19px;
     @extend %montserrat-700;
     padding-bottom: 19px;
+    width: 70%;
+    text-align: center;
     font-size: 20px;
     line-height: 24px;
     color: $title;

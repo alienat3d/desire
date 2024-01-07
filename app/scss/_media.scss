@@ -308,6 +308,11 @@
       transform: translateY(20px);
     }
   }
+  .menu:last-of-type {
+    border-bottom: 1px solid #5a5a5a;
+    padding-bottom: 20px;
+  }
+
   .logo {
     z-index: 16;
   }
@@ -321,8 +326,8 @@
   }
 
   .menu__list-link {
-    display: block;
-    padding: 15px 0;
+    display: inline-block;
+    padding: 15px 0 5px;
   }
 
   .header__inner {
@@ -372,14 +377,6 @@
   .title {
     font-size: 28px;
     line-height: 36px;
-  }
-
-  .menu__list-link--active {
-    border: none;
-  }
-
-  .menu__list-link--line {
-    border-bottom: 2px solid rgba(54, 56, 56, 0.7);
   }
 
   .collection {
